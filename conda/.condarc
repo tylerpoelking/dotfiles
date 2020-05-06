@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - defaults
+
+create_default_packages:
+  - jupyter
+  - pandas
+  - numpy
