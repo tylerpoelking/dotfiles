@@ -97,8 +97,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit"
+alias lls="ls -alh"
+alias mkdir="mkdir -p"
+alias v="vim"
+alias mv="mv -i"
 alias updatedotfiles="git submodule update --remote --merge"
-alias ctags="`brew --prefix`/bin/ctags"
+if [[ "$(uname)" == "Darwin" ]]; then alias ctags="`brew --prefix`/bin/ctags"; fi
 
 # By Corbin: 
 # for tldr
