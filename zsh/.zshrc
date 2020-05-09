@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias updatedotfiles="git submodule update --remote --merge"
+alias ctags="`brew --prefix`/bin/ctags"
 
 # By Corbin: 
 # for tldr
