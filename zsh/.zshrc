@@ -132,3 +132,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add prefix for dl remote machine
+if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
