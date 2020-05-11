@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+	email = corbin.albert@gmail.com
+	name = Corbin Albert
+
+[core]
+	excludesfile = /Users/corbin/.gitignore_global
+
+[alias]
+	graph = log --all --graph --decorate --oneline
+	ai = add -p
+	st = status -sb
+
+[merge]
+	defaultToUpstream = true
+	tool = vimdiff
