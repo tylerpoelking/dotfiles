@@ -1,3 +1,8 @@
+if [ -f /etc/profile ]; then
+     	PATH=""
+	source /etc/profile
+fi
+#
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -134,3 +139,7 @@ unset __conda_setup
 
 # Add prefix for dl remote machine
 if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
+
+# For Jekyll
+export GEM_HOME=$HOME/.gem/ruby/2.6.0/gems/
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
