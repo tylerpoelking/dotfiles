@@ -13,3 +13,6 @@
 [submodule "vim/.vim/pack/vendor/start/fugitive"]
 	path = vim/.vim/pack/vendor/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
+[submodule "vim/.vim/pack/vendor/start/vim-flake8"]
+	path = vim/.vim/pack/vendor/start/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git
