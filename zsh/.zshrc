@@ -1,8 +1,9 @@
+# to prevent tmux from messing up the PATH variable
 if [ -f /etc/profile ]; then
-     	PATH=""
-	source /etc/profile
+    PATH=""
+    source /etc/profile
 fi
-#
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
