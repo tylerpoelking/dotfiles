@@ -81,3 +81,13 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Plugins
 filetype indent plugin on
+
+" Remap <C-{J,K,L,H}> for easy pane switching
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Open split windows to bottom and right, not top and left
+set splitbelow
+set splitright
