@@ -113,6 +113,7 @@ alias v="vim"
 alias mv="mv -i"
 alias updatedotfiles="git submodule update --remote --merge"
 if [[ "$(uname)" == "Darwin" ]]; then alias ctags="`brew --prefix`/bin/ctags"; fi
+alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
 
 # By Corbin: 
 # for tldr
