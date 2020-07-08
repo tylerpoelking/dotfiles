@@ -122,7 +122,7 @@ complete -W "$(tldr 2>/dev/null --list)" tldr
 export PATH="/usr/local/sbin:$PATH"
 
 # for vim keybindings
-bindkey -v
+# bindkey -v
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
