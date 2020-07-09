@@ -14,6 +14,10 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
+" map leader to spacebar
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 " Disable the default Vim startup message.
 set shortmess+=I
 
@@ -91,3 +95,6 @@ nnoremap <C-H> <C-W><C-H>
 " Open split windows to bottom and right, not top and left
 set splitbelow
 set splitright
+
+" Color Scheme (Gruvbox)
+autocmd vimenter * colorscheme gruvbox
