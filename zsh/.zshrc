@@ -145,5 +145,5 @@ unset __conda_setup
 if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
 
 # For Jekyll
-export GEM_HOME=$HOME/.gem/ruby/2.6.0/gems/
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+# export GEM_HOME=$HOME/.gem/ruby/2.6.0/gems/
+# export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
