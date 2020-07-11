@@ -7,9 +7,6 @@
 [submodule "vim/.vim/pack/vendor/start/gruvbox"]
 	path = vim/.vim/pack/vendor/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-[submodule "vim/.vim/pack/vendor/start/coc.nvim"]
-	path = vim/.vim/pack/vendor/start/coc.nvim
-	url = https://github.com/neoclide/coc.nvim.git
 [submodule "vim/.vim/pack/vendor/start/commentary"]
 	path = vim/.vim/pack/vendor/start/commentary
 	url = https://tpope.io/vim/commentary.git
