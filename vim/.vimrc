@@ -166,3 +166,6 @@ endfunction
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" fzf remap to ctrlp
+nnoremap <C-p> :GFiles<CR>
