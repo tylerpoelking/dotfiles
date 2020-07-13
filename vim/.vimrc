@@ -101,7 +101,14 @@ set splitbelow
 set splitright
 
 " Color Scheme (Gruvbox)
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
 autocmd vimenter * colorscheme gruvbox
+set background=dark
 
 " CoC Configs
 " Don't pass messages to |ins-completion-menu|.
@@ -168,4 +175,5 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " fzf remap to ctrlp
+set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :GFiles<CR>

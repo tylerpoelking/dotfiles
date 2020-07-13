@@ -103,7 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs="git status"
+alias gs="git status -sb"
+alias gst="git status"
 alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit"
@@ -147,3 +148,5 @@ if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
 # For Jekyll
 # export GEM_HOME=$HOME/.gem/ruby/2.6.0/gems/
 # export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -16,6 +16,6 @@
 [submodule "vim/.vim/pack/vendor/start/lightline.vim"]
 	path = vim/.vim/pack/vendor/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim
-[submodule "vim/.vim/pack/vendor/start/fzf"]
-	path = vim/.vim/pack/vendor/start/fzf
-	url = https://github.com/junegunn/fzf.git
+[submodule "vim/.vim/pack/vendor/start/fzf.vim"]
+	path = vim/.vim/pack/vendor/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
