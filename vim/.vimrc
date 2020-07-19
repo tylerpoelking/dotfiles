@@ -10,6 +10,9 @@
 " loaded some other way (e.g. saved as `foo`, and then Vim started with
 " `vim -u foo`).
 set nocompatible
+set expandtab
+set shiftwidth=4
+set softtabstop=4
 
 " Turn on syntax highlighting.
 syntax on
@@ -23,7 +26,7 @@ set shortmess+=I
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=50
 
 " Show line numbers.
 set number
