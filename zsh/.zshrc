@@ -103,6 +103,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+if [[ "$(uname)" == "Darwin" ]]; then 
+    alias ctags="`brew --prefix`/bin/ctags"
+    alias ls='gls -F --color'
+else
+    alias ls='ls -F --color'
+fi
 alias gs="git status -sb"
 alias gst="git status"
 alias ga="git add"
@@ -115,7 +121,6 @@ alias mkdir="mkdir -p"
 alias v="vim"
 alias mv="mv -i"
 alias updatedotfiles="git submodule update --remote --merge"
-if [[ "$(uname)" == "Darwin" ]]; then alias ctags="`brew --prefix`/bin/ctags"; fi
 alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
 alias evrc="vim ~/.vimrc"
 alias ezrc="vim ~/.zshrc"
