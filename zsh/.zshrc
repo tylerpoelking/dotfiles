@@ -74,7 +74,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd osx)
+plugins=(git fasd osx poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,9 +131,10 @@ export PATH=$PATH:~/bin
 complete -W "$(tldr 2>/dev/null --list)" tldr
 export PATH="/usr/local/sbin:$PATH"
 
-# for vim keybindings
-# bindkey -v
-
+# Initialize pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
@@ -157,3 +158,5 @@ if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
 # export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+PATH="$HOME/.poetry/bin:$PATH"
