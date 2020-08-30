@@ -1,8 +1,8 @@
 # to prevent tmux from messing up the PATH variable
-if [ -f /etc/profile ]; then
-    PATH=""
-    source /etc/profile
-fi
+# if [ -f /etc/profile ]; then
+#     PATH=""
+#     source /etc/profile
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -114,7 +114,6 @@ alias gst="git status"
 alias ga="git add"
 alias gaa="git add --all"
 alias gc="git commit"
-alias ls='gls -F --color'
 alias ll="ls -alh"
 alias lls='ls -lh'
 alias mkdir="mkdir -p"
