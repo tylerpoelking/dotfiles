@@ -124,6 +124,13 @@ alias updatedotfiles="git submodule update --remote --merge"
 alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
 alias evrc="vim ~/.vimrc"
 alias ezrc="vim ~/.zshrc"
+alias svrc="source ~/.vimrc"
+alias szrc="source ~/.zshrc"
+
+# Project specific alias
+alias cdri='cd ~/gitrepos/ri_covid'
+alias cdnb='cd ~/gitrepos/ri_covid/notebooks'
+alias cari='conda activate ri_covid'
 
 # By Corbin: 
 # for tldr

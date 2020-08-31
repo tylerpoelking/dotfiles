@@ -181,3 +181,7 @@ nmap <leader>rn <Plug>(coc-rename)
 " fzf remap to ctrlp
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-p> :GFiles<CR>
+
+" vim-slime
+let g:slime_target = "tmux"
+let g:slime_default_config = {"socket_name": get(split($TMUX, ","), 0), "target_pane": ":.2"}
