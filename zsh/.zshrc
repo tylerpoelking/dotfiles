@@ -109,6 +109,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
 else
     alias ls='ls -F --color'
 fi
+alias conde='conda deactivate'
+alias poetrysh='conde && poetry shell && conde'
 alias gs="git status -sb"
 alias gst="git status"
 alias ga="git add"
