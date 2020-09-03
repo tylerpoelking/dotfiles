@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -74,7 +74,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd osx poetry)
+plugins=(git fasd osx poetry vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,10 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# ls aliases. I prefer the gls colors, so if on mac, change ls to gls
 if [[ "$(uname)" == "Darwin" ]]; then 
     alias ctags="`brew --prefix`/bin/ctags"
     alias ls='gls -F --color'
@@ -118,24 +116,57 @@ alias gaa="git add --all"
 alias gc="git commit"
 alias ll="ls -alh"
 alias lls='ls -lh'
+
+# Other sensible system aliases
 alias mkdir="mkdir -p"
-alias v="vim"
 alias mv="mv -i"
-alias updatedotfiles="git submodule update --remote --merge"
-alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
+alias v="vim"
+
+# git aliases
+alias gs="git status -sb"
+alias gst="git status"
+alias ga="git add"
+alias gaa="git add --all"
+alias gc="git commit"
+
+# Editing and sourcing vimrc and zshrc files
 alias evrc="vim ~/.vimrc"
 alias ezrc="vim ~/.zshrc"
+alias svrc="source ~/.vimrc"
+alias szrc="source ~/.zshrc"
+
+# virtual env aliases
+alias conde='conda deactivate'
+alias poetrysh='conde && poetry shell && conde'
+alias env-export='conda env export --no-builds | grep -v "prefix" > environment.yml'
+
+# Project specific alias
+alias cdri='cd ~/gitrepos/ri_covid'
+alias cdnb='cd ~/gitrepos/ri_covid/notebooks'
+alias cari='conda activate ri_covid'
 
 # By Corbin: 
-# for tldr
+# Add prefix for dl remote machine
+if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
+
+# enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# for tldr bash program
 export PATH=$PATH:~/bin
 complete -W "$(tldr 2>/dev/null --list)" tldr
 export PATH="/usr/local/sbin:$PATH"
+
+# PYTHON ENV MANAGEMENT
 
 # Initialize pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
+
+# Put poetry (python package mananger) on path
+PATH="$HOME/.poetry/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$("$HOME/miniconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
@@ -150,14 +181,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# Add prefix for dl remote machine
-if [[ $(hostname) == "deeplearning" ]]; then PS1="[dl] ":$PS1; fi
-
-# For Jekyll
-# export GEM_HOME=$HOME/.gem/ruby/2.6.0/gems/
-# export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-PATH="$HOME/.poetry/bin:$PATH"

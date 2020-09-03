@@ -19,3 +19,6 @@
 [submodule "vim/.vim/pack/vendor/start/fzf.vim"]
 	path = vim/.vim/pack/vendor/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/.vim/pack/vendor/start/vim-slime"]
+	path = vim/.vim/pack/vendor/start/vim-slime
+	url = https://github.com/jpalardy/vim-slime.git
