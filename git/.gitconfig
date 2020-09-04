@@ -4,7 +4,7 @@
     name = Tyler Poelking
 
 [core]
-    excludesfile = /Users/tylerpoelking/.gitignore_global
+	excludesFile = ~/.gitignore_global
 
 [alias]
     graph = log --all --graph --decorate --oneline
